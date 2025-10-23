@@ -175,24 +175,24 @@ let prompt = require('prompt-sync')();//last me () esliye laga rhe hai kyuki ye 
 
 
 
-// next pattern is -- 
-// 1
-// 12
-// 123
-// 1234
-// 12345
+// // next pattern is -- 
+// // 1
+// // 12
+// // 123
+// // 1234
+// // 12345
 
-for(let i = 1; i <= 5; i++){
-    for(let j = 1; j <= i; j++){
-        process.stdout.write(j+' ');//process.stdout -- hamesa string print karta hai to ham esme string ka space add kar rhe hai nhi karenge to error aaygi.
-    }
-    console.log();
-}
-// 1 
-// 1 2
-// 1 2 3
-// 1 2 3 4
-// 1 2 3 4 5
+// for(let i = 1; i <= 5; i++){
+//     for(let j = 1; j <= i; j++){
+//         process.stdout.write(j+' ');//process.stdout -- hamesa string print karta hai to ham esme string ka space add kar rhe hai nhi karenge to error aaygi.
+//     }
+//     console.log();
+// }
+// // 1 
+// // 1 2
+// // 1 2 3
+// // 1 2 3 4
+// // 1 2 3 4 5
 
 
 
@@ -204,27 +204,182 @@ for(let i = 1; i <= 5; i++){
 //ABCDE
 
 
+// for(let i = 1; i <= 5; i++){
+//     let ascii = 65 ;
+//     for(let j = 1; j <= i; j++){
+//         process.stdout.write(String.fromCharCode(ascii)+" ");
+//         ascii++;
+//     }
+//     console.log()
+// }
+// // 65
+// // 65 66
+// // 65 66 67
+// // 65 66 67 68  
+// // 65 66 67 68 69
+
+// //thik hai to kam ho chuka hai lekin yaha to number dikh rha hai hame to ABCDE chaiye to ye number nhi hai ye abcd ki ascii value hai yani 65 number se Capital A banta hai 66 se capital B banta hai hamne ascii value ka use esliye kiya hai kyuki js me ham caractor ko ++ nhi kar sakte hai. to hame ab bas etna karna hai ki ascii value ko caractor me convert karna hai.
+// //to value ko string me badalne ke liye String.from.CharCode(ascii) -- funtion ka use karte hai.
+
+// // A
+// // A B
+// // A B C
+// // A B C D
+// // A B C D E
+
+// //kam ho gya ...
+
+
+//2nd example --
+
+// let n = Number(prompt('Enter a number '));
+
+// for(let i = 1; i <= n; i++){
+//     let ascii = 65;
+//     for(let j = 1; j<=i; j++){
+//         process.stdout.write(String.fromCharCode(ascii)+" ");
+//         ascii++
+//     }
+//     console.log();
+// }
+
+// // A 
+// // A B
+// // A B C
+// // A B C D
+// // A B C D E
+// // A B C D E F
+// // A B C D E F G
+// // A B C D E F G H
+// // A B C D E F G H I
+
+
+// //reverse star 
+
+// let maxnum = Number(prompt('Enter a max numer: '));//5
+// let num = Number(prompt('Enter a numer: '));//1
+// for(let i = maxnum; i >= num; i--){
+//     for(let j = 1; j <= i; j++){
+//         process.stdout.write('* ');
+//     }
+//     console.log();
+// }
+// // * * * * * 
+// // * * * *
+// // * * *
+// // * *
+// // *
+
+
+//merror right angle traiangle -- 
+//merror pattern banane ke liye hame ulte side par * chaiye to mana har row me 5 * hai to agar hame 1st row me 1 * chiye lekin ulta side me to ham use 4 bar space ka dhakka denge to last me chala jayga aise hi 2nd row me ** star honge to unhe 3 bar dhakka denge uske bad 2 bar dhakka denge or last me 1 bar denge.
+//or kuchh es time pa pattern abnega
+//         *
+//       * *
+//     * * *
+//   * * * *
+// * * * * *
+//agar es pattorn ko dhyan se dekhe or upar vale pattern ko denge to upar vala space dene layakh to lag rha hai matlab agar ham "*" na dekhar " " sirf space de de to kam ho sakta hai.
+
+// let n = Number(prompt('Enter a numebr : '));
+
+// for(let i = 1; i <= n; i++){
+
+//     //invert
+//     for(let j = 1; j <= n-i; j++){
+//         process.stdout.write("  ");//yaha par 2 space dena hoga;
+//     }
+//     //right
+//     for(let j = 1; j <= i; j++){
+//         process.stdout.write("* ");
+//     }
+//     console.log();
+// }
+// //         * 
+// //       * *
+// //     * * *
+// //   * * * *
+// // * * * * *
+// //upar 2 space denge tabhi ye pattern banega nhito 
+// //ye banega.
+// //     *
+// //    * *
+// //   * * *
+// //  * * * *
+
+
+
+
+
+// //homeword me hame piramid banana hai.
+// for(let i = 1; i<=5; i++){
+//     for(let j = 1; j<=5-i; j++){
+//         process.stdout.write(' ');//single space
+//     }
+
+//     for(let j = 1; j <= i; j++){
+//         process.stdout.write('* ');
+//     }
+
+//     console.log();
+// }
+// //yaha par yani pattern print ho rha hai kin ham last loop jab * ko print kar rhe hai to voha par ham ak space de nge to piramid print hoga kyuki upar vala loop left se space dega or jab star print hoga tab ham right se space de rhe hai esliye piramid print ho rha hai niche vale loop ka space hataynge to traiangle vala loop print hoga.
+// //            * 
+// // //       * *
+// // //     * * *
+// // //   * * * *
+// // // * * * * *
+
+
+// // //  *     
+// //    * *    
+// //   * * *   
+// //  * * * *  
+// // * * * * * 
+
+
+
+
+
+//X pattern --- 
+
+// for(let i = 1; i <= 5; i++){
+//     for(let j = 1; j <= 5; j++){
+//         if(i === j || i + j === 5+1) {
+//             process.stdout.write('* ');
+//         }
+
+//         else {
+//             process.stdout.write('  ');//duble space
+//         }
+//     }
+//     console.log()
+// }
+// // *       * 
+// //   *   *
+// //     *
+// //   *   *
+// // *       *
+
+
+
+//V pattern -- //bas 2 se * kar denga hai 5 ko
 for(let i = 1; i <= 5; i++){
-    let ascii = 65 ;
-    for(let j = 1; j <= i; j++){
-        process.stdout.write(String.fromCharCode(ascii)+" ");
-        ascii++;
+    for(let j = 1; j <= 2*5-1; j++){
+        if(i === j || i + j === 2*5) {
+            process.stdout.write('* ');
+        }
+
+        else {
+            process.stdout.write('  ');//duble space
+        }
     }
     console.log()
 }
-// 65
-// 65 66
-// 65 66 67
-// 65 66 67 68  
-// 65 66 67 68 69
+// *               * 
+//   *           *   
+//     *       *     
+//       *   *
+//         *
 
-//thik hai to kam ho chuka hai lekin yaha to number dikh rha hai hame to ABCDE chaiye to ye number nhi hai ye abcd ki ascii value hai yani 65 number se Capital A banta hai 66 se capital B banta hai hamne ascii value ka use esliye kiya hai kyuki js me ham caractor ko ++ nhi kar sakte hai. to hame ab bas etna karna hai ki ascii value ko caractor me convert karna hai.
-//to value ko string me badalne ke liye String.from.CharCode(ascii) -- funtion ka use karte hai.
 
-// A
-// A B
-// A B C
-// A B C D
-// A B C D E
-
-//kam ho gya ...
